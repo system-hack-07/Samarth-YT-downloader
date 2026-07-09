@@ -576,27 +576,6 @@ DOWNLOADER_HTML = """<!DOCTYPE html>
             .text-xs { font-size: 9px; }
         }
 
-        .footer-badge {
-            background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(99,102,241,0.1));
-            border: 1px solid rgba(59,130,246,0.2);
-        }
-
-        .made-by {
-            font-weight: 900;
-            font-size: 13px;
-            background: linear-gradient(135deg, #3b82f6, #6366f1, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-        }
-        
-        .made-by .flag {
-            -webkit-text-fill-color: initial;
-            font-size: 16px;
-        }
-
         .footer-credit {
             text-align: center;
             padding: 12px 0 4px 0;
@@ -609,8 +588,8 @@ DOWNLOADER_HTML = """<!DOCTYPE html>
         }
         
         .footer-credit .credit-text {
-            font-size: 11px;
-            font-weight: 700;
+            font-size: 13px;
+            font-weight: 800;
             letter-spacing: 1px;
             background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
             -webkit-background-clip: text;
@@ -800,7 +779,7 @@ DOWNLOADER_HTML = """<!DOCTYPE html>
         </div>
     </div>
 
-    <!-- Footer - Only Made By -->
+    <!-- Footer -->
     <div class="footer-credit">
         <span class="credit-text">
             𝐌𝐚𝐝𝐞 𝐛𝐲 𝐒𝐚𝐦𝐚𝐫𝐭𝐡 <span class="flag">🇮🇳</span>
@@ -1256,21 +1235,4 @@ def api_retrieve(task_id):
     return "Download not complete", 404
 
 if __name__ == '__main__':
-    print("""
-    ╔══════════════════════════════════════════════════════════╗
-    ║     SAMARTH YouTube Downloader v2.5.0 PRO               ║
-    ║                                                          ║
-    ║     🌟 Features:                                        ║
-    ║     - Premium Landing Page                              ║
-    ║     - Dark/Light Theme Switching                        ║
-    ║     - Video Preview with Metadata                      ║
-    ║     - Download History with View Counter                ║
-    ║     - Original Filename Preservation                   ║
-    ║     - Click Sounds with Feedback                        ║
-    ║     - Made by Samarth 🇮🇳                              ║
-    ║                                                          ║
-    ║     🚀 Running on: http://localhost:8080               ║
-    ║     Press Ctrl+C to stop                                ║
-    ╚══════════════════════════════════════════════════════════╝
-    """)
     app.run(debug=False, port=8080, host='0.0.0.0')
