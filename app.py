@@ -8,8 +8,8 @@ import json
 from datetime import datetime
 
 app = Flask(__name__)
-DOWNLOAD_DIR = os.path.abspath("downloads")
-HISTORY_FILE = os.path.abspath("history.json")
+DOWNLOAD_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "downloads")
+HISTORY_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "history.json")
 os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 
 PROGRESS_TRACKER = {}
@@ -370,7 +370,7 @@ LANDING_HTML = """<!DOCTYPE html>
 </body>
 </html>"""
 
-# DOWNLOADER PAGE HTML
+# DOWNLOADER PAGE HTML (Keep the same as before)
 DOWNLOADER_HTML = """<!DOCTYPE html>
 <html lang="en">
 <head>
